@@ -1,5 +1,4 @@
 import { Platform, StyleSheet, Dimensions } from "react-native";
-import { Configuration } from "./Configuration";
 
 const { width, height } = Dimensions.get("window");
 const SCREEN_WIDTH = width < height ? width : height;
@@ -12,7 +11,7 @@ export const AppStyles = {
     title: "#464646",
     subtitle: "#545454",
     categoryTitle: "#161616",
-    tint: "#ff5a66",
+    tint: "#334EFF",
     description: "#bbbbbb",
     filterTitle: "#8a8a8a",
     starRating: "#2bdf85",
