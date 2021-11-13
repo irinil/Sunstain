@@ -4,8 +4,6 @@ import Button from "react-native-button";
 import { AppStyles } from "../AppStyles";
 import firestore from '@react-native-firebase/firestore'
 import auth from '@react-native-firebase/auth'
-import { add, userID } from '../utils/utils'
-
 
 class SignupScreen extends React.Component {
   constructor(props) {

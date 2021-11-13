@@ -32,7 +32,7 @@ class WelcomeScreen extends React.Component {
     }
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Say hello to your new app</Text>
+        <Text style={styles.title}>Sunstain</Text>
         <Button
           containerStyle={styles.loginContainer}
           style={styles.loginText}
