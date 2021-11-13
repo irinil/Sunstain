@@ -62,3 +62,5 @@ buck-out/
 # CocoaPods
 Pods/
 android/.project
+android/java_pid5380.hprof
+android/.settings/org.eclipse.buildship.core.prefs
