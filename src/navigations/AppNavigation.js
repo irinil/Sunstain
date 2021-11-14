@@ -16,6 +16,7 @@ import { AppIcon, AppStyles } from "../AppStyles";
 import { Configuration } from "../Configuration";
 import DrawerContainer from "../components/DrawerContainer";
 import AddProductScreen from "../screens/AddProductScreen";
+import SearchProductScreen from "../screens/SearchProductScreen";
 
 const noTransitionConfig = () => ({
   transitionSpec: {
