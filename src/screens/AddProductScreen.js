@@ -6,6 +6,8 @@ import { CheckedIcon, UncheckedIcon } from '../images/svg-icons';
 import { connect } from "react-redux";
 import { add, userID } from '../utils/utils'
 import {AddProductStyle} from "../AppStyles";
+import Geolocation from '@react-native-community/geolocation';
+
 
 
 const mapStateToProps = state => ({
@@ -13,7 +15,7 @@ const mapStateToProps = state => ({
 });
 
 const AddProductScreen = function ({ navigation }) {
-  const clearItem = { userID: userID(), type: 'Energy', name: '', description: '', location: '', contact: '', quantity: '1' }
+  const clearItem = { userID: userID(), type: 'Sell', name: '', description: '', location: '', contact: '', quantity: '1' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(true);
   const [position, setPosition] = React.useState({})
