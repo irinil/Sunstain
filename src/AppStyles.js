@@ -148,6 +148,81 @@ export const AddProductStyle = StyleSheet.create({
   }
 });
 
+export const SearchProductStyle = StyleSheet.create({
+  outerView: {
+    backgroundColor: '#FFF',
+    width: '100%',
+    height: '100%'
+  },
+  inputsView: {
+    backgroundColor: '#F1F0EE',
+    padding: 16,
+    padding: 22,
+  },
+  label: {
+    fontFamily: 'IBMPlexSans-Medium',
+    color: '#000',
+    fontSize: 14,
+    paddingBottom: 5
+  },
+  selector: {
+    fontFamily: 'IBMPlexSans-Medium',
+    backgroundColor: '#fff',
+    padding: 8,
+    marginBottom: 10
+  },
+  textInput: {
+    fontFamily: 'IBMPlexSans-Medium',
+    backgroundColor: '#fff',
+    padding: 8,
+    marginBottom: 10
+  },
+  button: {
+    backgroundColor: '#1062FE',
+    color: '#FFFFFF',
+    fontFamily: 'IBMPlexSans-Medium',
+    fontSize: 16,
+    overflow: 'hidden',
+    padding: 12,
+    textAlign:'center',
+    marginTop: 15
+  },
+  searchResultText: {
+    fontFamily: 'IBMPlexSans-Bold',
+    padding: 10,
+    color: '#1062FE'
+  },
+  flatListView: {
+    backgroundColor: '#FFF'
+  },
+  itemTouchable: {
+    flexDirection: 'column',
+    padding: 15,
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    borderBottomColor: '#dddddd',
+    borderBottomWidth: 0.25
+  },
+  itemView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  itemName: {
+    fontSize: 24,
+    fontFamily: 'IBMPlexSans-Medium',
+  },
+  itemQuantity: {
+    fontSize: 14,
+    fontFamily: 'IBMPlexSans-Medium',
+    color: 'gray'
+  },
+  itemDescription: {
+    fontSize: 14,
+    fontFamily: 'IBMPlexSans-Medium',
+    color: 'gray'
+  }
+});
+
 export const ListStyle = StyleSheet.create({
   title: {
     fontSize: 16,
