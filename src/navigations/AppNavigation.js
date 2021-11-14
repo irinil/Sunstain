@@ -15,6 +15,7 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import { AppIcon, AppStyles } from "../AppStyles";
 import { Configuration } from "../Configuration";
 import DrawerContainer from "../components/DrawerContainer";
+import AddProductScreen from "../screens/AddProductScreen";
 
 const noTransitionConfig = () => ({
   transitionSpec: {
@@ -48,7 +49,8 @@ const LoginStack = createStackNavigator(
 
 const HomeStack = createStackNavigator(
   {
-    Home: { screen: HomeScreen }
+    Home: { screen: HomeScreen },
+    AddProduct: {screen: AddProductScreen}
   },
   {
     initialRouteName: "Home",
