@@ -7,6 +7,7 @@ import {
 } from "react-native";
 
 import FastImage from "react-native-fast-image";
+import Button from "react-native-button";
 import { connect } from "react-redux";
 import {
   AppIcon,
@@ -59,8 +60,16 @@ class HomeScreen extends React.Component {
     return (
       <ScrollView style={styles.container}>
         <Text style={styles.title}>Welcome {this.props.user.email}</Text>
+        <Button
+          containerStyle={styles.loginContainer}
+          style={styles.loginText}
+          onPress={() => this.props.navigation.navigate("AddProduct")}
+          >
+          Add Product
+        </Button> 
       </ScrollView>
     );
+    
   }
 }
 
