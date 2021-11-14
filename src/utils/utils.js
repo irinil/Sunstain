@@ -2,7 +2,7 @@ import Config from 'react-native-config';
 
 import DeviceInfo from 'react-native-device-info';
 
-let serverUrl = Config.SUNSTAIN_SERVER_URL;
+let serverUrl = "http://localhost:3000";
 if (serverUrl.endsWith('/')) {
   serverUrl = serverUrl.slice(0, -1)
 }
