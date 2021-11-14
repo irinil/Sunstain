@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3000
 
-const cloudant = require('./lib/cloudant.js');
+const cloudant = require('./database/cloudant.js');
 
 const app = express();
 app.use(bodyParser.json());
