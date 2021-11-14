@@ -51,7 +51,8 @@ const LoginStack = createStackNavigator(
 const HomeStack = createStackNavigator(
   {
     Home: { screen: HomeScreen },
-    AddProduct: {screen: AddProductScreen}
+    AddProduct: {screen: AddProductScreen},
+    SearchProduct: {screen: SearchProductScreen}
   },
   {
     initialRouteName: "Home",
