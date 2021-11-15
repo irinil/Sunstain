@@ -233,6 +233,49 @@ export const SearchProductStyle = StyleSheet.create({
   }
 });
 
+export const ViewAddedProductStyle = StyleSheet.create({
+  flatListView: {
+    backgroundColor: '#FFF'
+  },
+  itemTouchable: {
+    flexDirection: 'column',
+    padding: 15,
+    justifyContent: 'flex-start',
+    alignItems: 'stretch',
+    borderBottomColor: '#dddddd',
+    borderBottomWidth: 0.25
+  },
+  itemView: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  itemName: {
+    fontSize: 24,
+    fontFamily: 'IBMPlexSans-Medium',
+  },
+  itemDescription: {
+    fontSize: 14,
+    fontFamily: 'IBMPlexSans-Medium',
+    color: 'gray'
+  },
+  itemQuantity: {
+    fontSize: 14,
+    fontFamily: 'IBMPlexSans-Medium',
+    color: 'gray'
+  },
+  emptyListView: {
+    backgroundColor: '#FFFFFF',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  emptyListText: {
+    fontFamily: 'IBMPlexSans-Bold',
+    color: '#999999',
+    fontSize: 16
+  }
+});
+
 export const ListStyle = StyleSheet.create({
   title: {
     fontSize: 16,

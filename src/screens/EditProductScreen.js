@@ -5,8 +5,6 @@ import PickerSelect from 'react-native-picker-select';
 import { CheckedIcon, UncheckedIcon } from '../images/svg-icons';
 import Geolocation from '@react-native-community/geolocation';
 import {AddProductStyle} from "../AppStyles";
-
-
 import { update, remove, userID } from '../utils/utils'
 
 const EditResource = (props) => {
