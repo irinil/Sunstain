@@ -145,6 +145,16 @@ export const AddProductStyle = StyleSheet.create({
     padding: 12,
     textAlign:'center',
     marginTop: 15
+  },
+  deleteButton: {
+    backgroundColor: '#da1e28',
+    color: '#FFFFFF',
+    fontFamily: 'IBMPlexSans-Medium',
+    fontSize: 16,
+    overflow: 'hidden',
+    padding: 12,
+    textAlign:'center',
+    marginTop: 15
   }
 });
 
