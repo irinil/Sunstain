@@ -2,7 +2,8 @@ import Config from 'react-native-config';
 
 import DeviceInfo from 'react-native-device-info';
 
-let serverUrl = "http://localhost:3000";
+//let serverUrl = 'http://localhost:3000';
+let serverUrl = 'http://192.168.1.3:3000'
 if (serverUrl.endsWith('/')) {
   serverUrl = serverUrl.slice(0, -1)
 }
@@ -14,18 +15,18 @@ export const userID = () => {
 }
 
 export const search = (query) => {
-  const type = query.type ? `type=${query.type}` : ''
   const name = query.name ? `name=${query.name}` : ''
   const userID = query.userID ? `userID=${query.userID}` : ''
 
-  return fetch(`${serverUrl}/api/resource?${name}&${type}&${userID}`, {
+
+  return fetch(`${serverUrl}/api/resource?${name}&${userID}`, {
     method: 'GET',
     mode: 'no-cors',
     cache: 'no-cache',
     headers: {
       'Content-Type': 'application/json'
     }
-  }).then((response) => {
+  }).then((response) => { 
     if (!response.ok) {
       throw new Error(response.statusText || response.message || response.status);
     } else {
@@ -43,6 +44,7 @@ export const add = (item) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(item)
+    
   }).then((response) => {
     if (!response.ok) {
       throw new Error(response.statusText || response.message || response.status);
