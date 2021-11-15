@@ -155,7 +155,8 @@ app.delete('/api/resource/:id', (req, res) => {
 });
 
 const server = app.listen(port, () => {
-   const host = server.address().address;
+   //const host = server.address().address;
+   const host = '192.168.1.3';
    const port = server.address().port;
    console.log(`Sunstain listening at http://${host}:${port}`);
 });

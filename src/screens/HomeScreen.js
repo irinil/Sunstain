@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 import {
   AppIcon,
   AppStyles,
+  AddProductStyle
 } from "../AppStyles";
 import { Configuration } from "../Configuration";
 
@@ -62,10 +63,17 @@ class HomeScreen extends React.Component {
         <Text style={styles.title}>Welcome {this.props.user.email}</Text>
         <Button
           containerStyle={styles.loginContainer}
-          style={styles.loginText}
+          style={AddProductStyle.button}
           onPress={() => this.props.navigation.navigate("AddProduct")}
           >
-          Add Product
+          Sell
+        </Button> 
+        <Button
+          containerStyle={styles.loginContainer}
+          style={AddProductStyle.button}
+          onPress={() => this.props.navigation.navigate("SearchProduct")}
+          >
+          Buy
         </Button> 
       </ScrollView>
     );
