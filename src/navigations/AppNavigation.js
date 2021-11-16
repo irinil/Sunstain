@@ -17,6 +17,9 @@ import { Configuration } from "../Configuration";
 import DrawerContainer from "../components/DrawerContainer";
 import AddProductScreen from "../screens/AddProductScreen";
 import SearchProductScreen from "../screens/SearchProductScreen";
+import ViewAddedProductScreen from "../screens/ViewAddedProduct";
+import Icon from "react-native-vector-icons/FontAwesome";
+
 
 const noTransitionConfig = () => ({
   transitionSpec: {
@@ -51,9 +54,7 @@ const LoginStack = createStackNavigator(
 const HomeStack = createStackNavigator(
   {
     Home: { screen: HomeScreen },
-    AddProduct: {screen: AddProductScreen},
-    SearchProduct: {screen: SearchProductScreen}
-  },
+    AddProduct: {screen: AddProductScreen}  },
   {
     initialRouteName: "Home",
     headerMode: "float",
@@ -69,40 +70,38 @@ const HomeStack = createStackNavigator(
 
 const TabNavigator = createBottomTabNavigator(
   {
-    Home: { screen: HomeStack }
-  },
-  {
-    navigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, tintColor }) => {
-        const { routeName } = navigation.state;
-        let iconName;
-        if (routeName === "Home") {
-          iconName = AppIcon.images.home;
-        }
+        Home: {
+          screen: HomeStack,
+          navigationOptions: {
+            tabBarIcon: ({ tintColor }) => (
+              <Icon name= "home" size={25} color={tintColor} />
+            )
+          }
+        },
 
-        // You can return any component that you like here! We usually use an
-        // icon component from react-native-vector-icons
-        return (
-          <Image
-            style={{
-              tintColor: focused ? AppStyles.color.tint : AppStyles.color.grey
-            }}
-            source={iconName}
-          />
-        );
+        Search: {
+          screen: SearchProductScreen,
+          navigationOptions: {
+            tabBarIcon: ({ tintColor }) => (
+              <Icon name="search" size={25} color={tintColor} />
+            )
+          }
+        },
+        Profile: {
+          screen: ViewAddedProductScreen,
+          navigationOptions: {
+            tabBarIcon: ({ tintColor }) => (
+              <Icon name="user" size={25} color={tintColor} />
+            )
+          }
+        },
+      },
+      {
+        initialRouteName: 'Home',
+        tabBarOptions: {
+          activeTintColor: '#334EFF'
+        }
       }
-    }),
-    initialLayout: {
-      height: 300
-    },
-    tabBarOptions: {
-      activeTintColor: AppStyles.color.tint,
-      inactiveTintColor: "gray",
-      style: {
-        height: Configuration.home.tab_bar_height
-      }
-    }
-  }
 );
 
 // drawer stack

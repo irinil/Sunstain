@@ -7,7 +7,7 @@ import Geolocation from '@react-native-community/geolocation';
 import {AddProductStyle} from "../AppStyles";
 import { update, remove, userID } from '../utils/utils'
 
-const EditResource = (props) => {
+const EditProductScreen = (props) => {
   const clearItem = { userID: userID(), e: 'Sell', name: '', description: '', location: '', contact: '', quantity: '1' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(false);
@@ -182,4 +182,4 @@ const EditResource = (props) => {
   );
 };
 
-export default EditResource;
+export default EditProductScreen;

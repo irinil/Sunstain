@@ -3,7 +3,7 @@ import { FlatList, View, Text, TouchableOpacity, Alert } from 'react-native';
 import {ViewAddedProductStyle} from "../AppStyles";
 import { search, userID } from '../utils/utils'
 
-const ViewAddedProduct = function ({ navigation }) {
+const ViewAddedProductScreen = function ({ navigation }) {
   const [items, setItems] = React.useState([]);
 
   React.useEffect(() => {
@@ -47,4 +47,4 @@ const ViewAddedProduct = function ({ navigation }) {
   }
 };
 
-export default ViewAddedProduct;
+export default ViewAddedProductScreen;
