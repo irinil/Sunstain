@@ -4,7 +4,7 @@ import {SearchProductStyle} from "../AppStyles";
 
 import { search } from '../utils/utils';
 
-const SearchResources = function ({ route, navigation }) {
+const SearchProductScreen = function ({ route, navigation }) {
   const [query, setQuery] = React.useState({ type: 'Food', name: '' });
   const [items, setItems] = React.useState([]);
   const [info, setInfo] = React.useState('');
@@ -68,4 +68,4 @@ const SearchResources = function ({ route, navigation }) {
   );
 };
 
-export default SearchResources;
+export default SearchProductScreen;
