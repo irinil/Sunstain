@@ -5,7 +5,7 @@ import {SearchProductStyle} from "../AppStyles";
 import { search } from '../utils/utils';
 
 const SearchProductScreen = function ({ route, navigation }) {
-  const [query, setQuery] = React.useState({ type: 'Food', name: '' });
+  const [query, setQuery] = React.useState({ type: 'Sell', name: '' });
   const [items, setItems] = React.useState([]);
   const [info, setInfo] = React.useState('');
 

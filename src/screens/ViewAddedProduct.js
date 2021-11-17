@@ -2,21 +2,19 @@ import React from 'react';
 import { FlatList, View, Text, TouchableOpacity, Alert } from 'react-native';
 import {ViewAddedProductStyle} from "../AppStyles";
 import { search, userID } from '../utils/utils'
+import gp from '../utils/globalParams'; 
+
 
 const ViewAddedProductScreen = function ({ navigation }) {
   const [items, setItems] = React.useState([]);
-
-  React.useEffect(() => {
-    navigation.addListener('focus', () => {
-      search({ userID: userID() })
-        .then(setItems)
-        .catch(err => {
-          console.log(err);
-          Alert.alert('ERROR', 'Please try again. If the problem persists contact an administrator.', [{text: 'OK'}]);
-        });
-    })
-  }, []);
-
+  
+    search({username:gp.userId()})
+      .then(setItems)
+      .catch(err => {
+        console.log(err);
+        Alert.alert('ERROR', 'Please try again. If the problem persists contact an administrator.', [{text: 'OK'}]);
+      });
+  
   const Item = (props) => {
     return (
       <TouchableOpacity style={ViewAddedProductStyle.itemTouchable}
