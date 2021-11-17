@@ -16,6 +16,8 @@ import { GoogleSignin, GoogleSigninButton } from "react-native-google-signin";
 import { AsyncStorage } from "react-native";
 const FBSDK = require("react-native-fbsdk");
 const { LoginManager, AccessToken } = FBSDK;
+import gp from '../utils/globalParams'; 
+
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -56,6 +58,7 @@ class LoginScreen extends React.Component {
               alert("User does not exist. Please try again.");
             }
           })
+          .then(gp.userId(user_uid))
           .catch(function(error) {
             const { code, message } = error;
             alert(message);
