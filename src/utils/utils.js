@@ -1,9 +1,10 @@
 import Config from 'react-native-config';
 
 import DeviceInfo from 'react-native-device-info';
+import gp from './globalParams';
 
 //let serverUrl = 'http://localhost:3000';
-let serverUrl = 'http://192.168.1.3:3000'
+let serverUrl = 'http://192.168.1.5:3000'
 if (serverUrl.endsWith('/')) {
   serverUrl = serverUrl.slice(0, -1)
 }
@@ -17,9 +18,10 @@ export const userID = () => {
 export const search = (query) => {
   const name = query.name ? `name=${query.name}` : ''
   const userID = query.userID ? `userID=${query.userID}` : ''
+  const username = gp.userId()
 
 
-  return fetch(`${serverUrl}/api/resource?${name}&${userID}`, {
+  return fetch(`${serverUrl}/api/resource?${name}&${userID}&${username}`, {
     method: 'GET',
     mode: 'no-cors',
     cache: 'no-cache',

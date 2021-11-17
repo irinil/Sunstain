@@ -44,6 +44,7 @@ app.get('/', (req, res) => {
  * - type
  * - name
  * - userID
+ * - username
  *
  * A list of resource objects will be returned (which can be an empty list)
  */
@@ -51,8 +52,9 @@ app.get('/api/resource', (req, res) => {
   const type = req.query.type;
   const name = req.query.name;
   const userID = req.query.userID;
+  const username = req.query.username
   cloudant
-    .find(type, name, userID)
+    .find(type,name, username, userID)
     .then(data => {
       if (data.statusCode != 200) {
         res.sendStatus(data.statusCode)
@@ -98,12 +100,13 @@ app.post('/api/resource', (req, res) => {
   const name = req.body.name;
   const description = req.body.description || '';
   const userID = req.body.userID || '';
+  const username = req.body.username;
   const quantity = req.body.quantity || 1;
   const location = req.body.location || '';
   const contact = req.body.contact;
 
   cloudant
-    .create(type, name, description, quantity, location, contact, userID)
+    .create(type, name, username, description, quantity, location, contact, userID)
     .then(data => {
       if (data.statusCode != 201) {
         res.sendStatus(data.statusCode)
@@ -127,13 +130,14 @@ app.patch('/api/resource/:id', (req, res) => {
   const type = req.body.type || '';
   const name = req.body.name || '';
   const description = req.body.description || '';
+  const username = req.body.username;
   const userID = req.body.userID || '';
   const quantity = req.body.quantity || '';
   const location = req.body.location || '';
   const contact = req.body.contact || '';
 
   cloudant
-    .update(req.params.id, type, name, description, quantity, location, contact, userID)
+    .update(req.params.id, type, name,username, description, quantity, location, contact, userID)
     .then(data => {
       if (data.statusCode != 200) {
         res.sendStatus(data.statusCode)
@@ -156,7 +160,7 @@ app.delete('/api/resource/:id', (req, res) => {
 
 const server = app.listen(port, () => {
    //const host = server.address().address;
-   const host = '192.168.1.3';
+   const host = '192.168.1.5';
    const port = server.address().port;
    console.log(`Sunstain listening at http://${host}:${port}`);
 });
