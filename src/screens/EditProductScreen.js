@@ -123,7 +123,7 @@ const EditProductScreen = (props) => {
         placeholder='e.g., 10 kwh'
         blurOnSubmit={false}
       />
-      <Text style={styles.label}>Contact</Text>
+      <Text style={AddProductStyle.label}>Contact</Text>
       <TextInput
         style={AddProductStyle.textInput}
         value={item.contact}

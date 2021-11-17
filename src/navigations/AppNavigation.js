@@ -18,6 +18,7 @@ import DrawerContainer from "../components/DrawerContainer";
 import AddProductScreen from "../screens/AddProductScreen";
 import SearchProductScreen from "../screens/SearchProductScreen";
 import ViewAddedProductScreen from "../screens/ViewAddedProduct";
+import EditProductScreen from '../screens/EditProductScreen';
 import Icon from "react-native-vector-icons/FontAwesome";
 
 
@@ -54,7 +55,8 @@ const LoginStack = createStackNavigator(
 const HomeStack = createStackNavigator(
   {
     Home: { screen: HomeScreen },
-    AddProduct: {screen: AddProductScreen}  },
+    AddProduct: {screen: AddProductScreen},
+    EditProduct: {screen: EditProductScreen} },
   {
     initialRouteName: "Home",
     headerMode: "float",
