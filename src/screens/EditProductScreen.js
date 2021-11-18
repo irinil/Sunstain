@@ -8,7 +8,7 @@ import {AddProductStyle} from "../AppStyles";
 import { update, remove, userID } from '../utils/utils'
 
 const EditProductScreen = (props) => {
-  const clearItem = { userID: userID(), e: 'Sell', name: '', description: '', location: '', contact: '', quantity: '1' }
+  const clearItem = { userID: userID(), e: 'Sell', name: '', description: '',price:'', location: '', contact: '', quantity: '1' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(false);
   const [position, setPosition] = React.useState({})
@@ -171,7 +171,7 @@ const EditProductScreen = (props) => {
         item.name.trim() !== '' &&
         item.contact.trim() !== '' &&
         <TouchableOpacity onPress={updateItem}>
-          <Text style={AddProductStyle.button}>Update</Text>
+          <Text style={AddProductStyle.updateButton}>Update</Text>
         </TouchableOpacity>
       }
 
