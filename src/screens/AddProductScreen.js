@@ -15,7 +15,7 @@ const mapStateToProps = state => ({
 });
 
 const AddProductScreen = function ({ navigation }) {
-  const clearItem = { userID: userID(), type: 'Sell', name: '', description: '', location: '', contact: '', quantity: '1' }
+  const clearItem = { userID: userID(), type: 'Sell', name: '', description: '', location: '', contact: '', quantity: '1',price: '' }
   const [item, setItem] = React.useState(clearItem);
   const [useLocation, setUseLocation] = React.useState(true);
   const [position, setPosition] = React.useState({})
@@ -121,6 +121,17 @@ const AddProductScreen = function ({ navigation }) {
         enablesReturnKeyAutomatically={true}
         placeholder='e.g., 10 kWh from solar panels'
       />
+
+      <Text style={AddProductStyle.label}>Price</Text>
+      <TextInput
+        style={AddProductStyle.textInput}
+        value={item.price}
+        onChangeText={(t) => setItem({ ...item, price: t})}
+        onSubmitEditing={sendItem}
+        returnKeyType='send'
+        enablesReturnKeyAutomatically={true}
+        placeholder='10$'
+      />
       <Text style={AddProductStyle.label}>Location</Text>
       <View style={AddProductStyle.checkboxContainer}>
         <TouchableOpacity onPress={toggleUseLocation}>
@@ -135,7 +146,7 @@ const AddProductScreen = function ({ navigation }) {
         <Text style={AddProductStyle.checkboxLabel}> Use my current location </Text>
       </View>
       <TextInput
-        style={useLocation ? AddProductStyle.textInputDisabled : AddProductStyle.textInput}
+        style={AddProductStyle.textInput}
         value={item.location}
         onChangeText={(t) => setItem({ ...item, location: t})}
         onSubmitEditing={sendItem}
