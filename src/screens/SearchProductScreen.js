@@ -12,7 +12,7 @@ const SearchProductScreen = function ({ route, navigation }) {
   const Item = (props) => {
     return (
       <TouchableOpacity style={SearchProductStyle.itemTouchable}
-         >
+       onPress={() => { navigation.navigate('BuyPage', { item: props }); }}>
         <View style={SearchProductStyle.itemView}>
           <Text style={SearchProductStyle.itemName}>{props.name}</Text>
           <Text style={SearchProductStyle.itemQuantity}> ( {props.quantity} ) </Text>

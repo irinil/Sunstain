@@ -12,7 +12,7 @@ const ViewAddedProductScreen = function ({ navigation }) {
       .then(setItems)
       .catch(err => {
         console.log(err);
-        Alert.alert('ERROR', 'Please try again. If the problem persists contact an administrator.', [{text: 'OK'}]);
+        //Alert.alert('ERROR', 'Please try again. If the problem persists contact an administrator.', [{text: 'OK'}]);
       });
   
   const Item = (props) => {

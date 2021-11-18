@@ -52,9 +52,10 @@ app.get('/api/resource', (req, res) => {
   const type = req.query.type;
   const name = req.query.name;
   const userID = req.query.userID;
-  const username = req.query.username
+  const username = req.query.username;
+  const price = req.query.price;
   cloudant
-    .find(type,name, username, userID)
+    .find(type,name, username, userID,price)
     .then(data => {
       if (data.statusCode != 200) {
         res.sendStatus(data.statusCode)
@@ -103,10 +104,11 @@ app.post('/api/resource', (req, res) => {
   const username = req.body.username;
   const quantity = req.body.quantity || 1;
   const location = req.body.location || '';
+  const price = req.query.price || 0;
   const contact = req.body.contact;
 
   cloudant
-    .create(type, name, username, description, quantity, location, contact, userID)
+    .create(type, name, username, description, quantity, location, contact, userID,price)
     .then(data => {
       if (data.statusCode != 201) {
         res.sendStatus(data.statusCode)
@@ -130,14 +132,15 @@ app.patch('/api/resource/:id', (req, res) => {
   const type = req.body.type || '';
   const name = req.body.name || '';
   const description = req.body.description || '';
-  const username = req.body.username;
+  const username = req.body.username || '';
   const userID = req.body.userID || '';
   const quantity = req.body.quantity || '';
   const location = req.body.location || '';
   const contact = req.body.contact || '';
+  const price = req.query.price || '';
 
   cloudant
-    .update(req.params.id, type, name,username, description, quantity, location, contact, userID)
+    .update(req.params.id, type, name,username, description, quantity, location, contact, userID, price)
     .then(data => {
       if (data.statusCode != 200) {
         res.sendStatus(data.statusCode)
