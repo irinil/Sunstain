@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, View, Text, TouchableOpacity, Alert } from 'react-native';
+import { FlatList, View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import {ViewAddedProductStyle} from "../AppStyles";
 import { search, userID } from '../utils/utils'
 import gp from '../utils/globalParams'; 
@@ -17,6 +17,8 @@ const ViewAddedProductScreen = function ({ navigation }) {
   
   const Item = (props) => {
     return (
+  <ScrollView>
+      <Text style={ViewAddedProductStyle.title}>My Products</Text>
       <TouchableOpacity style={ViewAddedProductStyle.itemTouchable}
           onPress={() => { navigation.navigate('EditProduct', { item: props }); }}>
         <View style={ViewAddedProductStyle.itemView}>
@@ -25,6 +27,7 @@ const ViewAddedProductScreen = function ({ navigation }) {
         </View>
         <Text style={ViewAddedProductStyle.itemDescription}>{props.description}</Text>
       </TouchableOpacity>
+      </ScrollView>
     );
   };
   

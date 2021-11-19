@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  View
 } from "react-native";
 
 import FastImage from "react-native-fast-image";
@@ -86,6 +87,12 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     flex: 1,
     padding: Configuration.home.listing_item.offset
+  },
+  buttonContainer:{
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+
   },
   title: {
     fontWeight: "bold",
