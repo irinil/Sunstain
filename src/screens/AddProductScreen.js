@@ -111,7 +111,7 @@ const AddProductScreen = function ({ navigation }) {
         enablesReturnKeyAutomatically={true}
         placeholder='user@domain.com'
       />
-      <Text style={AddProductStyle.label}>Description</Text>
+      <Text style={AddProductStyle.label}>Energy Provider</Text>
       <TextInput
         style={AddProductStyle.textInput}
         value={item.description}
