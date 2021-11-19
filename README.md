@@ -138,11 +138,17 @@ To run the mobile application (using the Xcode iOS Simulator or Android Studio E
             1. **Android only**: Click on Debug in Android Studio.
 
 With the application running in the simulator/emulator, you should be able to navigate through the various screens:
-![Login Screen](/images/Login_Screen.png)
-![Sign in Screen](/images/Sign_in_Screen.png)
-![Welcome Screen](/images/Welcome_Screen2.png)
-![Buy Product Screen](/images/Search_Screen.png)
-![Buy Notification](/images/Second_Notification.png)
+### Login Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Login_Screen.png" height="550">
+### Sign in Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Sign_in_Screen.png" height="550">
+### Welcome Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Welcome_Screen2.png" height="550">
+### Buy/Search Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Search_Screen.png" height="550">
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Buy_Screen.png" height="550">
+### Buy Notification Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Second_Notification.png" height="550">
 
 ## Resources
 
