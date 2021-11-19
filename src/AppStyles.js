@@ -258,7 +258,13 @@ export const ViewAddedProductStyle = StyleSheet.create({
   itemView: {
     flexDirection: 'row',
     justifyContent: 'space-between'
-  },
+  }
+  ,
+  title: {
+    fontSize: 35,
+    fontFamily: 'IBMPlexSans-Medium',
+  }
+  ,
   itemName: {
     fontSize: 24,
     fontFamily: 'IBMPlexSans-Medium',
@@ -284,6 +290,18 @@ export const ViewAddedProductStyle = StyleSheet.create({
     color: '#999999',
     fontSize: 16
   }
+});
+
+export const BuyProductStyle = StyleSheet.create({
+  title: {
+    fontSize: 24,
+    fontFamily: 'IBMPlexSans-Medium',
+  },
+  price: {
+    fontSize: 14,
+    fontFamily: 'IBMPlexSans-Medium',
+  }
+
 });
 
 export const ListStyle = StyleSheet.create({
