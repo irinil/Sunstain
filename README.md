@@ -26,7 +26,7 @@ Our planet is dying. The main energy resources are being depleted and the global
 
 ### How can technology help?
 
-This is the problem that Sunstain comes to solve. By understanding the current landscape and the importance of the depletion of natural resources, Sunstain provides an easy and accessible solution for everyone to use. It takes advantage of one of the few elements that can assist in producing energy without harming the environment at the same time, the sun. By harvesting solar energy, most of our every day needs can be satisfied without requiring additional sources. Several households, though, produce more that they can consume, leaving them with both wasted energy and increased costs. By using Sunstain they are given the option to sell that extra energy to willing buyers and recycle it instead of throwing it away.
+This is the problem that Sunstain comes to solve. By understanding the current landscape and the importance of the depletion of natural resources, Sunstain provides an easy and accessible solution for everyone to use. It takes advantage of one of the few elements that can assist in producing energy without harming the environment at the same time, the sun. By harvesting solar energy, most of our everyday needs can be satisfied without requiring additional sources. Several households, though, produce more that they can consume, leaving them with both wasted energy and increased costs. By using Sunstain they are given the option to sell that extra energy to willing buyers and recycle it instead of throwing it away.
 
 ## The idea and how it works
 
@@ -35,6 +35,13 @@ The whole process takes place inside the Sunstain mobile application. Users can 
 ## Diagrams
 
 ![Cooperation architecture diagram](/images/ArchitectureDiagram.JPG)
+
+The solution is a mobile interface and a data storage to hold the energy products. In the client side we have a mobile application (both in IOS and Android) developed with React native and on the server side we have the utilized the IBM Cloud and IBM Cloudant.
+
+1. The user sign ups and can be a buyer or seller interchangably. 
+2. The user can buy/search or sell energy products.
+3. The energy provider sends a confirmation via a notification when the purchase is processed.
+4. The user can view previws history and edit his own products availabe for sale.
 
 ## Technology
 
