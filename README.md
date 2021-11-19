@@ -41,13 +41,6 @@ Placeholder
 
 ![Cooperation architecture diagram](/images/ArchitectureDiagram.JPG)
 
-This solution starter idea combines a chat interface (Watson Assistant), data storage to hold the status of supplies available, and location services with real-time information to get users the information they need.
-
-1. The Recipient launches the mobile app and can access information across multiple services.
-1. The Recipient can ask questions to Watson Assistant and get answers on food/service availability questions.
-1. The Supplier can post the availability of stock or services they can provide, as well as locate the items they need.
-1. The Recipient can obtain geolocation data to plot routes to collect (or drop off) supplies using HERE Location Services.
-
 ## Technology
 
 ### IBM Cloud Services
