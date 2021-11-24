@@ -11,35 +11,37 @@ This solution starter was created as part of the IBM call for code.
 ## Contents
 
 1. [Overview](#overview)
-2. [The idea](#the-idea)
-3. [How it works](#how-it-works)
-4. [Diagrams](#diagrams)
-5. [Technology](#technology)
-6. [Getting started](#getting-started)
-7. [Resources](#resources)
-8. [License](#license)
+2. [The idea and how it works](#the-idea-and-how-it-works)
+3. [Diagrams](#diagrams)
+4. [Technology](#technology)
+5. [Getting started](#getting-started)
+6. [Resources](#resources)
+7. [License](#license)
 
 ## Overview
 
 ### What's the problem?
 
-Placeholder
+Our planet is dying. The main energy resources are being depleted and the global energy challenges are increasing, and this can only lead to catastrophic results. Today’s generation takes the natural elements for granted and does not regard for their sustainability and survival. This disrespect, though, will leave the planet in an uninhabitable state for future generations and force them into an apocalyptic scenario, despite them not being at fault. It is of vital importance, therefore, to take action now against this dystopian prediction and secure a bright and vivid next day. To achieve that, we need to protect our ecosystem and find ways with which to imprint this need to every person’s mind. This needs to be a holistic approach and we all need to collaborate for its success.
 
 ### How can technology help?
 
-Placeholder
+This is the problem that Sunstain comes to solve. By understanding the current landscape and the importance of the depletion of natural resources, Sunstain provides an easy and accessible solution for everyone to use. It takes advantage of one of the few elements that can assist in producing energy without harming the environment at the same time, the sun. By harvesting solar energy, most of our everyday needs can be satisfied without requiring additional sources. Several households, though, produce more that they can consume, leaving them with both wasted energy and increased costs. By using Sunstain they are given the option to sell that extra energy to willing buyers and recycle it instead of throwing it away.
 
-## The idea
+## The idea and how it works
 
-Placeholder
-
-## How it works
-
-Placeholder
+The whole process takes place inside the Sunstain mobile application. Users can either sell some the solar energy they produce to assist in sustaining the environment while making financial profit along the way or buy from existing buyers. This is achieved through a bidding contest where participants share the price they are willing to pay for a given service. The seller can then select the desired user. The settled agreement with the national energy providers ensures the smooth transition and billing of the service and the recipient will be able to take advantage of the solar energy purchased without other complications.
 
 ## Diagrams
 
 ![Cooperation architecture diagram](/images/ArchitectureDiagram.JPG)
+
+The solution is a mobile interface and a data storage to hold the energy products. In the client side we have a mobile application (both in IOS and Android) developed with React native and on the server side we have the utilized the IBM Cloud and IBM Cloudant.
+
+1. The user sign ups and can be a buyer or seller interchangably. 
+2. The user can buy/search or sell energy products.
+3. The energy provider sends a confirmation via a notification when the purchase is processed.
+4. The user can view previws history and edit his own products availabe for sale.
 
 ## Technology
 
@@ -90,7 +92,7 @@ Log into the IBM Cloud and provision a [CouchDB instance using Cloudant](https:/
 To set up and launch the server application:
 
 1. Go to the `Sunstain/server` directory of the cloned repo.
-1. Copy the `.env.example` file in the `starter-kit/server-app` directory, and create a new file named `.env`.
+1. Copy the `.env.example` file in the `Sunstain/server` directory, and create a new file named `.env`.
 1. Edit the **name** value in the `manifest.yml` file to your application name (for example, _my-app-name_).
 1. From a terminal:
     1. Go to the `Sunstain/server` directory of the cloned repo.
@@ -138,11 +140,21 @@ To run the mobile application (using the Xcode iOS Simulator or Android Studio E
             1. **Android only**: Click on Debug in Android Studio.
 
 With the application running in the simulator/emulator, you should be able to navigate through the various screens:
-![Login Screen](/images/Login_Screen.png)
-![Sign in Screen](/images/Sign_in_Screen.png)
-![Welcome Screen](/images/Welcome_Screen2.png)
-![Buy Product Screen](/images/Search_Screen.png)
-![Buy Notification](/images/Second_Notification.png)
+### Login Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Login_Screen.png" height="550">
+
+### Sign in Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Sign_in_Screen.png" height="550">
+
+### Welcome Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Welcome_Screen2.png" height="550">
+
+### Buy/Search Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Search_Screen.png" height="550">
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Buy_Screen.png" height="550">
+
+### Buy Notification Screen
+<img src="https://github.com/irinil/Sunstain/blob/main/images/Second_Notification.png" height="550">
 
 ## Resources
 
